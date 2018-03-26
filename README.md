@@ -47,7 +47,7 @@ The JBits library required Java JDK 1.2.2 and JRE.
 
 ### Operating System Platform and Language Versions
 
-The software was developed on Windows 2000, with Cygwin version 1.3.10 using:
+The software was developed on Windows 2000 / XP, with Cygwin version 1.3.10 using:
 * Active Perl v5.6.1 built for MSWin32-x86-multi-thread
   with local patch ActivePerl Build 633, Compiled at Jun 17 2002.
 	* win32 dll is external to Cygwin.
