@@ -1,0 +1,64 @@
+
+# this file contains necessary information for detecting contention on
+# Virtex-Resources. The virtex-bits-const and virtex-value-const's are
+# the constants defined in the com.xilinx.JBits.Virtex.Bits package, and as
+# such will generally require the enclosing class name, along with a period,
+# to proceed the constant. For example:
+# OutMuxToSingle.OUT4_TO_SINGLE_NORTH12, OutMuxToSingle.ON
+#
+# The contention table is in the format of:
+# contentious-virtex-bits-const "," contentious-virtex-value-const <newline>
+# <tab> competing-virtex-bits-const "," competing-virtex-value-const \
+#	"," competing CLB row offset "," competing CLB col offset <newline>
+# <tab> another competing-virtex-bits-const ...
+#
+# note that the contentious virtex bits constant must start at the start of
+# the line, and all lines that follow with a leading tab define competing
+# virtex resources. Also, the offsets are integers, typically -1,0,+1 for
+# single lines.
+#
+#                   	J.A. Lee, December 2003
+
+
+
+OutMuxToSingle.SINGLE_EAST5, OutMuxToSingle.ON
+	OutMuxToSingle.OUT1_TO_SINGLE_WEST5, OutMuxToSingle.ON, 0, +1
+OutMuxToSingle.SINGLE_WEST5, OutMuxToSingle.ON
+	OutMuxToSingle.OUT1_TO_SINGLE_EAST5, OutMuxToSingle.ON, 0, -1
+
+OutMuxToSingle.SINGLE_EAST11, OutMuxToSingle.ON
+	OutMuxToSingle.OUT3_TO_SINGLE_WEST11, OutMuxToSingle.ON, 0, +1
+OutMuxToSingle.SINGLE_WEST11, OutMuxToSingle.ON
+	OutMuxToSingle.OUT3_TO_SINGLE_EAST11, OutMuxToSingle.ON, 0, -1
+
+OutMuxToSingle.SINGLE_EAST17, OutMuxToSingle.ON
+	OutMuxToSingle.OUT5_TO_SINGLE_WEST17, OutMuxToSingle.ON, 0, +1
+OutMuxToSingle.SINGLE_WEST17, OutMuxToSingle.ON
+	OutMuxToSingle.OUT5_TO_SINGLE_EAST17, OutMuxToSingle.ON, 0, -1
+
+OutMuxToSingle.SINGLE_EAST23, OutMuxToSingle.ON
+	OutMuxToSingle.OUT7_TO_SINGLE_WEST23, OutMuxToSingle.ON, 0, +1
+OutMuxToSingle.SINGLE_WEST23, OutMuxToSingle.ON
+	OutMuxToSingle.OUT7_TO_SINGLE_EAST23, OutMuxToSingle.ON, 0, -1
+
+OutMuxToSingle.SINGLE_NORTH0, OutMuxToSingle.ON
+	OutMuxToSingle.OUT1_TO_SINGLE_SOUTH0, OutMuxToSingle.ON, +1, 0
+OutMuxToSingle.SINGLE_SOUTH0, OutMuxToSingle.ON
+	OutMuxToSingle.OUT0_TO_SINGLE_NORTH0, OutMuxToSingle.ON, -1, 0
+
+OutMuxToSingle.SINGLE_NORTH1, OutMuxToSingle.ON
+	OutMuxToSingle.OUT0_TO_SINGLE_SOUTH1, OutMuxToSingle.ON, +1, 0
+OutMuxToSingle.SINGLE_SOUTH1, OutMuxToSingle.ON
+	OutMuxToSingle.OUT0_TO_SINGLE_NORTH1, OutMuxToSingle.ON, -1, 0
+
+OutMuxToSingle.SINGLE_NORTH12, OutMuxToSingle.ON
+	OutMuxToSingle.OUT5_TO_SINGLE_SOUTH12, OutMuxToSingle.ON, +1, 0
+OutMuxToSingle.SINGLE_SOUTH12, OutMuxToSingle.ON
+	OutMuxToSingle.OUT4_TO_SINGLE_NORTH12, OutMuxToSingle.ON, -1, 0
+
+OutMuxToSingle.SINGLE_NORTH13, OutMuxToSingle.ON
+	OutMuxToSingle.OUT4_TO_SINGLE_SOUTH13, OutMuxToSingle.ON, +1, 0
+OutMuxToSingle.SINGLE_SOUTH13, OutMuxToSingle.ON
+	OutMuxToSingle.OUT4_TO_SINGLE_NORTH13, OutMuxToSingle.ON, -1, 0
+
+

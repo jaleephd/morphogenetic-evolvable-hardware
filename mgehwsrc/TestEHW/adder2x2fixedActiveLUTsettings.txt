@@ -1,0 +1,14 @@
+# 	adder2x2fixedActiveLUTsettings.txt:
+# This pre-sets the ActiveLUTFNs for the adder2x2fixedlut tests
+# it will allow the LUT function to be reconfigured according
+# to changes to the routing lines (muxes) connecting to that LUT
+#		jl, June 2005
+
+set: 7,11: LUTActiveFN=LUT.SLICE0_G,XOR,1111
+set: 7,11: LUTActiveFN=LUT.SLICE1_G,AND,1111
+set: 7,11: LUTActiveFN=LUT.SLICE1_F,OR,1111
+set: 7,12: LUTActiveFN=LUT.SLICE0_G,OR,1111
+set: 7,12: LUTActiveFN=LUT.SLICE0_F,OR,1111
+set: 8,11: LUTActiveFN=LUT.SLICE0_G,OR,1111
+set: 8,11: LUTActiveFN=LUT.SLICE1_F,AND,1111
+set: 8,12: LUTActiveFN=LUT.SLICE1_F,OR,1111
