@@ -28,3 +28,13 @@ SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
 CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
 OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+Credits
+
+This application uses Open Source components. Links to source code are provided below.
+We acknowledge and are grateful to these developers for their contributions to open source.
+
+The suffix tree code in bioGA/lcsstr.c was adapted from the C code in file 'st.c'
+that forms the core of the Perl String::Ediff-0.01 module,
+by Bo Zou (boxzou@yahoo.com), released 25 Jan 2003 at www.cpan.org
+
