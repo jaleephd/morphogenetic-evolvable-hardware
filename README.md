@@ -48,6 +48,7 @@ The JBits library required Java JDK 1.2.2 and JRE.
 ### Operating System Platform, Language and Library Versions
 
 The software was developed on Windows 2000 / XP, with Cygwin version 1.3.10 using:
+* Bash 2
 * Active Perl v5.6.1 built for MSWin32-x86-multi-thread
   with local patch ActivePerl Build 633, Compiled at Jun 17 2002.
 	* win32 dll is external to Cygwin.
@@ -65,6 +66,36 @@ The software was developed on Windows 2000 / XP, with Cygwin version 1.3.10 usin
 	* (optional) for accessing mappings from IOB CoreTemplate pins to package pin name:
       unpack IobXCVpackage_v2.zip and place the class and javadoc files in their respective locations
       under: `com/xilinx/JBits/Virtex/RTPCore/Iob`
+
+While the Java dependencies are fixed due to JBits requirements, the rest of the system
+should be able run on later versions of Perl (Active Perl should no longer be required
+for more recent Perl installations), as external libraries were avoided to ensure
+ease of installation across multiple machines. Additionally, white it was developed under
+Cygwin 1.3.10, there is no requirement for that version, more recent versions should be
+compatible.
+
+The code should be agnostic to base operating system, only requiring a Bash-like shell (>= version 2).
+That is, it should be able to run directly on Linux (not tested) through the Bash shell,
+on any compatible version of Windows via Cygwin, and possibly on MacOS or Windows 10
+through Bash.
+
+### Setup for Running the MGEHW System
+
+Given that the above prerequisites are fulfilled, to run the system requires
+that all the compiled class files and executables must be placed in a directory
+in `CLASSPATH` and `PATH` (respectively) or along with the copies of scripts
+configuration files and null bitstreams, placed in a single directory
+from which the system is run. This is a current limitation of the (prototype) system.
+
+The system can be run without a complete installation of ActivePerl (more modern
+Cygwin installations and Linux should be able to use the system Perl)
+only the Perl interpreter and dll are needed in most cases, the exception to
+this is cleanupEHW.pl which uses globbing, and runMG.pl which calls
+cleanupEHW.pl.
+
+### Running the MGEHW System
+
+See `mgehwscr/EHW_README.txt` for details.
 
 
 ## For more information
