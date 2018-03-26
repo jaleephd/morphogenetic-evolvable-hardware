@@ -45,7 +45,7 @@ though it appears to be no longer supported,
 see: <https://forums.xilinx.com/t5/Virtex-Family-FPGAs/Where-can-I-find-JBits/td-p/746550>.
 The JBits library required Java JDK 1.2.2 and JRE.
 
-### Operating System Platform and Language Versions
+### Operating System Platform, Language and Library Versions
 
 The software was developed on Windows 2000 / XP, with Cygwin version 1.3.10 using:
 * Active Perl v5.6.1 built for MSWin32-x86-multi-thread
@@ -53,12 +53,12 @@ The software was developed on Windows 2000 / XP, with Cygwin version 1.3.10 usin
 	* win32 dll is external to Cygwin.
 	* need to ensure Active Perl is earlier in the `PATH` than Cygwin's `/usr/bin/perl`
 
-* JDK 1.2.2 + JRE
+* Java JDK 1.2.2 + JRE
     * need directory containing javac.exe, java.exe, etc added to path:
 	* in windows through control panel/system/advanced/environment variables: `C:\jdk1.2.2\bin\`
 	* in cygwin: `export PATH=C:/jdk1.2.2/bin/`
 
-* JBits 2.8
+* Xilinx JBits 2.8
     * requires JDK 1.2.2
     * need java's CLASSPATH environment variable set to the directory containing JBits
       (the one containing the "com" subdirectory): `C:\jdk1.2.2\lib;D:\JBits;.`
