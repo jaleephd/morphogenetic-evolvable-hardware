@@ -93,6 +93,16 @@ only the Perl interpreter and dll are needed in most cases, the exception to
 this is cleanupEHW.pl which uses globbing, and runMG.pl which calls
 cleanupEHW.pl.
 
+### Improving System Performance
+
+As the non-morphogenesis/FPGA components of the system run as a pipeline of Perl processes
+(i.e. disk bound), performance of these can be improved by the use of a RAM drive
+(`/dev/shm` on Linux), or if running over a long time (the JBits FPGA simulator is relatively slow),
+then a solid state drive (SSD) would provide a reasonable compromise between performance
+and ability to recover from machine failures. Note however that the majority of processing
+time is spent in the morphogenesis/FPGA component.
+
+
 ### Running the MGEHW System
 
 See `mgehwscr/EHW_README.txt` for details.
